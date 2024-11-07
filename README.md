@@ -1,32 +1,32 @@
 
-# OTP Email Service with Lockout Mechanism
+# 🔐 OTP Email Service with Lockout Mechanism
 
-This Spring Boot application provides a secure OTP (One-Time Password) verification via email, implementing a lockout mechanism after multiple failed attempts to enhance security.
+A Spring Boot application that provides secure OTP (One-Time Password) verification via email with a lockout mechanism after multiple failed attempts to enhance security.
 
-## Features
+## 🌟 Features
 
-- **Send OTP via Email**: Generate and send a secure OTP to the user's email address.
-- **OTP Expiry**: The OTP is valid for 1 minute, ensuring quick verification and security.
-- **Lockout Mechanism**: After 3 failed attempts, the user is locked out for 24 hours.
-- **Email Notification on Lockout**: Sends an email notification to the user when they are locked out.
-- **Configurable OTP Length and Expiry**: Set OTP length and expiry duration through configuration.
-  
-## Technologies Used
+- 📧 **Send OTP via Email**: Generates and sends a secure OTP to the user's email address.
+- ⏳ **OTP Expiry**: OTP is valid for 1 minute, ensuring quick verification and security.
+- 🔒 **Lockout Mechanism**: Locks out the user for 24 hours after 3 failed attempts.
+- 📬 **Email Notification on Lockout**: Sends an email to the user when they are locked out.
+- ⚙️ **Configurable Settings**: Set OTP length and expiry duration through configuration.
 
-- **Java 17**: Core programming language.
-- **Spring Boot**: Framework to simplify application setup and dependency management.
-- **Spring Mail (JavaMailSender)**: For sending OTP emails.
-- **H2 Database**: (Optional) For quick prototyping and testing. Easily switchable to other databases.
+## 🛠️ Technologies Used
 
-## Getting Started
+- **Java 17**: Programming language.
+- **Spring Boot**: For application setup and dependency management.
+- **Spring Mail (JavaMailSender)**: Used for sending OTP emails.
+- **H2 Database**: (Optional) For testing and prototyping, easily switchable to other databases.
 
-### Prerequisites
+## 🚀 Getting Started
+
+### 📋 Prerequisites
 
 - **Java 17** installed on your system.
 - **Maven** for dependency management.
 - Email configuration for `JavaMailSender` (SMTP settings for the email service provider).
 
-### Installation
+### 🛠️ Installation
 
 1. **Clone the Repository**
 
@@ -60,22 +60,22 @@ This Spring Boot application provides a secure OTP (One-Time Password) verificat
    mvn spring-boot:run
    ```
 
-### Configuration
+### ⚙️ Configuration
 
-- **OTP Expiration Time**: Set in `application.properties`:
+- **OTP Expiration Time**: Set the validity period for OTP in `application.properties`:
 
   ```properties
   otp.expiration-time=1  # OTP validity in minutes
   ```
 
-- **Lockout Settings**: Also configurable in `application.properties`:
+- **Lockout Settings**: Customize lockout settings as needed:
 
   ```properties
-  otp.max-attempts=3      # Maximum failed attempts
+  otp.max-attempts=3      # Maximum allowed failed attempts
   otp.lockout-duration=24 # Lockout duration in hours
   ```
 
-## Usage
+## 📖 Usage
 
 1. **Request OTP**
 
